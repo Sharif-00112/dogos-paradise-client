@@ -138,7 +138,7 @@ const Navigation = () => {
                         }}
                         >
                         {pages.map((page) => (
-                            <MenuItem style={{backgroundColor: 'gray'}} key={page} onClick={handleCloseNavMenu}>
+                            <MenuItem style={{backgroundColor: 'red'}} key={page} onClick={handleCloseNavMenu}>
                             <Typography textAlign="center">{page}</Typography>
                             </MenuItem>
                         ))}

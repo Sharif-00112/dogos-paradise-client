@@ -16,7 +16,7 @@ import useAuth from '../../../hooks/useAuth';
 
 const pages = [
     <Link 
-        style={{ textDecoration:'none', color:'white' }}
+        style={{ textDecoration:'none', color:'red' }}
         to = '/home'>
         <Button sx={{mx:1}} color="inherit">Home</Button>
     </Link>,

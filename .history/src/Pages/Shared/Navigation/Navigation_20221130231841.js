@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { Link, NavLink } from 'react-router-dom';
+// import AdbIcon from '@mui/icons-material/Adb';
 import useAuth from '../../../hooks/useAuth';
 
 const pages = [
@@ -22,31 +23,17 @@ const pages = [
     </Link>,
     <Link 
         style={{ textDecoration:'none', color:'white' }}
-        to = '/dogs'>
-        <Button sx={{mx:1}} color="inherit">Dogs</Button>
-    </Link>,
-    <Link 
-        style={{ textDecoration:'none', color:'white' }}
-        to = '/blogs'>
-        <Button sx={{mx:1}} color="inherit">Blogs</Button>
-    </Link>,
-    <Link 
-        style={{ textDecoration:'none', color:'white' }}
-        to = '/about'>
-        <Button sx={{mx:1}} color="inherit">About</Button>
-    </Link>,
-    <Link 
-        style={{ textDecoration:'none', color:'white' }}
-        to = '/contact'>
-        <Button sx={{mx:1}} color="inherit">Contact</Button>
+        to = '/appointment'>
+        <Button sx={{mx:1}} color="inherit">Appointment</Button>
     </Link>,
     <Link 
         style={{ textDecoration:'none', color:'white' }}
         to = '/dashboard'>
         <Button sx={{mx:1}} color="inherit">Dashboard</Button>
-    </Link>,
+    </Link>
 ];
 const settings = [
+    // 'Profile', 
     <Link 
         // style={{ textDecoration:'none', color:'white' }}
         style={{ textDecoration:'none' }}
@@ -60,7 +47,9 @@ const settings = [
         to = '/dashboard'>
         {/* <Button color="inherit">Appointment</Button> */}
         Dashboard
-    </Link>
+    </Link>,
+    // 'Account', 
+    // 'Dashboard'
 ];
  
 const Navigation = () => {
@@ -105,7 +94,7 @@ const Navigation = () => {
                         textDecoration: 'none',
                         }}
                     >
-                        Dogos Paradise
+                        Doctors Portal
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -161,7 +150,7 @@ const Navigation = () => {
                         textDecoration: 'none',
                         }}
                     >
-                        Dogos Paradise
+                        Doctors Portal
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', color:'gray' } }}>
                         {pages.map((page) => (

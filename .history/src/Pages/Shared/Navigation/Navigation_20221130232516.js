@@ -27,24 +27,9 @@ const pages = [
     </Link>,
     <Link 
         style={{ textDecoration:'none', color:'white' }}
-        to = '/blogs'>
-        <Button sx={{mx:1}} color="inherit">Blogs</Button>
-    </Link>,
-    <Link 
-        style={{ textDecoration:'none', color:'white' }}
-        to = '/about'>
-        <Button sx={{mx:1}} color="inherit">About</Button>
-    </Link>,
-    <Link 
-        style={{ textDecoration:'none', color:'white' }}
-        to = '/contact'>
-        <Button sx={{mx:1}} color="inherit">Contact</Button>
-    </Link>,
-    <Link 
-        style={{ textDecoration:'none', color:'white' }}
         to = '/dashboard'>
         <Button sx={{mx:1}} color="inherit">Dashboard</Button>
-    </Link>,
+    </Link>
 ];
 const settings = [
     <Link 
@@ -60,7 +45,7 @@ const settings = [
         to = '/dashboard'>
         {/* <Button color="inherit">Appointment</Button> */}
         Dashboard
-    </Link>
+    </Link>,
 ];
  
 const Navigation = () => {
