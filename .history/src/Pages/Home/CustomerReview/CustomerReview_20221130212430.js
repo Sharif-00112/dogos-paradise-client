@@ -1,14 +1,14 @@
 import React from 'react';
 import { Typography } from '@mui/material';
 
-const Register = () => {
+const CustomerReview = () => {
     return (
         <div>
             <Typography sx={{ m: 3, color: 'red', fontWeight: 600 }} variant="h4" component="div">
-                Register
+                Happy Customer's Sayings
             </Typography>
         </div>
     );
 };
 
-export default Register;
+export default CustomerReview;

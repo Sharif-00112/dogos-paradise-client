@@ -8,13 +8,13 @@ import errorIMG from '../../images/dog-404-error.jpg'
 const NotFound = () => {
     return (
         <div>
-            <Typography sx={{ my:7, fontSize: 25, fontWeight: 600 }} style={{color: 'red'}} variant="h6" component="div">
+            <Typography sx={{ my:7, fontSize: 35, fontWeight: 600 }} style={{color: 'red'}} variant="h6" component="div">
                 Error 404!
                 <br />
                 Perhaps I've mistakenly eaten the cables!
             </Typography>
             <img 
-                style={{width: 300 }} 
+                style={{width: 400 }} 
                 src={errorIMG} 
                 alt="404 Page Not Found!" 
             />

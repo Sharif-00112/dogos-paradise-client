@@ -8,13 +8,8 @@ import AuthProvider from './contexts/AuthProvider/AuthProvider';
 // import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import NotFound from './Pages/NotFound/NotFound';
 import Contact from './Pages/Home/Contact/Contact';
-import Products from './Pages/Home/Products/Products';
-import Story from './Pages/Home/Story/Story';
-import CustomerReviews from './Pages/Home/CustomerReviews/CustomerReviews';
-import Blogs from './Pages/Home/Blogs/Blogs';
-import About from './Pages/Home/About/About';
-// import Footer from './Pages/Shared/Footer/Footer';
 // import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+// import Footer from './Pages/Shared/Footer/Footer';
  
 function App() {
   return (
@@ -27,11 +22,6 @@ function App() {
             <Route exact path = '/login' element={<Login/>}/>
             <Route exact path = '/register' element={<Register/>}/>
             <Route exact path = '/contact' element={<Contact/>}/>
-            <Route exact path = '/products' element={<Products/>}/>
-            <Route exact path = '/story' element={<Story/>}/>
-            <Route exact path = '/reviews' element={<CustomerReviews/>}/>
-            <Route exact path = '/blogs' element={<Blogs/>}/>
-            <Route exact path = '/about' element={<About/>}/>
             {/* <Route exact path = '/appointment' element = {
               <PrivateRoute>
                 <Appointment></Appointment>
@@ -44,7 +34,7 @@ function App() {
             }> </Route> */}
             <Route path = '*' element={<NotFound/>}/>
           </Routes>
-          {/* <Footer></Footer> */}
+          {/* <Footer></Footer>  */}
         </Router>
       </AuthProvider>
     </div>

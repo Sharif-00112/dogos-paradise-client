@@ -1,7 +1,6 @@
 import React from 'react';
 import Footer from '../../Shared/Footer/Footer';
 import Navigation from '../../Shared/Navigation/Navigation';
-import About from '../About/About';
 import Banner from '../Banner/Banner';
 import Blogs from '../Blogs/Blogs';
 import Contact from '../Contact/Contact';
@@ -18,7 +17,6 @@ const Home = () => {
             <Story></Story>
             <CustomerReviews></CustomerReviews>
             <Blogs></Blogs>
-            <About></About>
             <Contact></Contact>
             <Footer></Footer>
         </div>

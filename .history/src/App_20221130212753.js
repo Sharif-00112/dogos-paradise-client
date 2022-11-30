@@ -9,10 +9,6 @@ import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import NotFound from './Pages/NotFound/NotFound';
 import Contact from './Pages/Home/Contact/Contact';
 import Products from './Pages/Home/Products/Products';
-import Story from './Pages/Home/Story/Story';
-import CustomerReviews from './Pages/Home/CustomerReviews/CustomerReviews';
-import Blogs from './Pages/Home/Blogs/Blogs';
-import About from './Pages/Home/About/About';
 // import Footer from './Pages/Shared/Footer/Footer';
 // import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
  
@@ -28,10 +24,6 @@ function App() {
             <Route exact path = '/register' element={<Register/>}/>
             <Route exact path = '/contact' element={<Contact/>}/>
             <Route exact path = '/products' element={<Products/>}/>
-            <Route exact path = '/story' element={<Story/>}/>
-            <Route exact path = '/reviews' element={<CustomerReviews/>}/>
-            <Route exact path = '/blogs' element={<Blogs/>}/>
-            <Route exact path = '/about' element={<About/>}/>
             {/* <Route exact path = '/appointment' element = {
               <PrivateRoute>
                 <Appointment></Appointment>

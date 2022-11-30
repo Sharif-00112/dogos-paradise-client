@@ -14,7 +14,7 @@ const NotFound = () => {
                 Perhaps I've mistakenly eaten the cables!
             </Typography>
             <img 
-                style={{width: 300 }} 
+                style={{width: 400 }} 
                 src={errorIMG} 
                 alt="404 Page Not Found!" 
             />
