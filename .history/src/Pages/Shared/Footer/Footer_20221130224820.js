@@ -13,7 +13,7 @@ const Footer = () => {
         <Container sx={{ py: 5, px:10 }}>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2}>
-                    <Grid item style={{ textAlign: 'left'}} xs={6} md={3}>
+                    <Grid item style={{ textAlign: 'left'}} xs={6} md={6}>
                         <Typography sx={{ my:2, fontSize: 18, fontWeight: 600 }} style={{color: 'red', fontWeight: 500, fontSize: 25 }} variant="h6" component="div">
                             All we provide
                         </Typography>
@@ -53,86 +53,36 @@ const Footer = () => {
                                 Puppies Cages
                         </Link>
                     </Grid>
-                    <Grid item style={{ textAlign: 'left'}} xs={6} md={3}>
+                    <Grid item style={{ textAlign: 'left'}} xs={6} md={6}>
                         <Typography sx={{ my:2, fontSize: 18, fontWeight: 600 }} style={{color: 'red', fontWeight: 500, fontSize: 25 }} variant="h6" component="div">
-                            Let's Have a Tour
+                            Our Address
                         </Typography>
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/emergencyDentalCare'>
-                                Terms and Conditions 
-                        </Link>
-                        <br />
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/checkUp'>
-                                Privacy Policy
-                        </Link>
-                        <br />
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/checkUp'>
-                                Laws and Regulations
-                        </Link>
-                    </Grid>
-                    <Grid item style={{ textAlign: 'left'}} xs={6} md={3}>
-                        <Typography sx={{ my:2, fontSize: 18, fontWeight: 600 }} style={{color: 'red', fontWeight: 500, fontSize: 25 }} variant="h6" component="div">
-                            Our Outlets
-                        </Typography>
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/emergencyDentalCare'>
-                                Dhanmondi 
-                        </Link>
-                        <br />
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/checkUp'>
-                                Uttara
-                        </Link>
-                        <br />
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/checkUp'>
-                                Banani
-                        </Link>
-                        <br />
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/checkUp'>
-                                Bashundhara 
-                        </Link>
-                    </Grid>
-                    <Grid item style={{ textAlign: 'left'}} xs={6} md={3}>
-                        <Typography sx={{ my:2, fontSize: 18, fontWeight: 600 }} style={{color: 'red', fontWeight: 500, fontSize: 25 }} variant="h6" component="div">
-                            Head Office
-                        </Typography>
-                        <Typography sx={{ fontSize: 16, fontWeight: 400 }} style={{color: 'red', fontWeight: 500, fontSize: 16 }} variant="" component="div">
+                        <Typography sx={{ fontSize: 16, fontWeight: 400 }} style={{color: 'red', fontWeight: 500, fontSize: 25 }} variant="" component="div">
                                 Bashundhara Baridhara <br />
                                 Dhaka-1000 
                         </Typography>
 
                         <a href="https://www.facebook.com/" target="_blank" style={{ textDecoration:'none', color:'white' }}>
-                            <Button sx={{ mt:3, mr:2 }} variant="contained" style={{backgroundColor: 'red'}}>
+                            <Button sx={{ mt:3, mr:2 }} variant="contained" style={{backgroundColor: '#5CE7ED'}}>
                                 FB
                             </Button>
                         </a>
                         <a href="https://www.google.com/" target="_blank" style={{ textDecoration:'none', color:'white' }}>
-                            <Button sx={{ mt:3, mr:2 }} variant="contained" style={{backgroundColor: 'red'}}>
+                            <Button sx={{ mt:3, mr:2 }} variant="contained" style={{backgroundColor: '#5CE7ED'}}>
                                 G+
                             </Button>
                         </a>
                         <a href="https://twitter.com/" target="_blank" style={{ textDecoration:'none', color:'white' }}>
-                            <Button sx={{ mt:3, mr:2 }} variant="contained" style={{backgroundColor: 'red'}}>
+                            <Button sx={{ mt:3, mr:2 }} variant="contained" style={{backgroundColor: '#5CE7ED'}}>
                                 TW
                             </Button>
                         </a>
 
-                        <Typography sx={{ mt:7, fontSize: 16, fontWeight: 400, color:'red' }} variant="" component="div">
+                        <Typography sx={{ mt:7, fontSize: 16, fontWeight: 400 }} variant="" component="div">
                                 Call Now
                         </Typography>
                         <a href="tel:+8801773241632" style={{ textDecoration:'none', color:'white' }}>
-                            <Button sx={{ mt:1, mr:2 }} variant="contained" style={{backgroundColor: 'red'}}>
+                            <Button sx={{ mt:1, mr:2 }} variant="contained" style={{backgroundColor: '#5CE7ED'}}>
                                 +8801773241632
                             </Button>
                         </a>
@@ -140,7 +90,7 @@ const Footer = () => {
                 </Grid>
             </Box>
         </Container>
-        <Typography sx={{ p:2, fontSize: 14, fontWeight: 400, color: 'red' }} variant="" component="div">
+        <Typography sx={{ p:2, mt:7, fontSize: 14, fontWeight: 400 }} variant="" component="div">
             Copyright &copy; 2022 - All Rights Reserved 
         </Typography>
     </div>

@@ -55,57 +55,7 @@ const Footer = () => {
                     </Grid>
                     <Grid item style={{ textAlign: 'left'}} xs={6} md={3}>
                         <Typography sx={{ my:2, fontSize: 18, fontWeight: 600 }} style={{color: 'red', fontWeight: 500, fontSize: 25 }} variant="h6" component="div">
-                            Let's Have a Tour
-                        </Typography>
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/emergencyDentalCare'>
-                                Terms and Conditions 
-                        </Link>
-                        <br />
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/checkUp'>
-                                Privacy Policy
-                        </Link>
-                        <br />
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/checkUp'>
-                                Laws and Regulations
-                        </Link>
-                    </Grid>
-                    <Grid item style={{ textAlign: 'left'}} xs={6} md={3}>
-                        <Typography sx={{ my:2, fontSize: 18, fontWeight: 600 }} style={{color: 'red', fontWeight: 500, fontSize: 25 }} variant="h6" component="div">
-                            Our Outlets
-                        </Typography>
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/emergencyDentalCare'>
-                                Dhanmondi 
-                        </Link>
-                        <br />
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/checkUp'>
-                                Uttara
-                        </Link>
-                        <br />
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/checkUp'>
-                                Banani
-                        </Link>
-                        <br />
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/checkUp'>
-                                Bashundhara 
-                        </Link>
-                    </Grid>
-                    <Grid item style={{ textAlign: 'left'}} xs={6} md={3}>
-                        <Typography sx={{ my:2, fontSize: 18, fontWeight: 600 }} style={{color: 'red', fontWeight: 500, fontSize: 25 }} variant="h6" component="div">
-                            Head Office
+                            Our Address
                         </Typography>
                         <Typography sx={{ fontSize: 16, fontWeight: 400 }} style={{color: 'red', fontWeight: 500, fontSize: 16 }} variant="" component="div">
                                 Bashundhara Baridhara <br />

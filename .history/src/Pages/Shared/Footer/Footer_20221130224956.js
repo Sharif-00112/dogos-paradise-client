@@ -13,7 +13,7 @@ const Footer = () => {
         <Container sx={{ py: 5, px:10 }}>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2}>
-                    <Grid item style={{ textAlign: 'left'}} xs={6} md={3}>
+                    <Grid item style={{ textAlign: 'left'}} xs={6} md={6}>
                         <Typography sx={{ my:2, fontSize: 18, fontWeight: 600 }} style={{color: 'red', fontWeight: 500, fontSize: 25 }} variant="h6" component="div">
                             All we provide
                         </Typography>
@@ -53,59 +53,9 @@ const Footer = () => {
                                 Puppies Cages
                         </Link>
                     </Grid>
-                    <Grid item style={{ textAlign: 'left'}} xs={6} md={3}>
+                    <Grid item style={{ textAlign: 'left'}} xs={6} md={6}>
                         <Typography sx={{ my:2, fontSize: 18, fontWeight: 600 }} style={{color: 'red', fontWeight: 500, fontSize: 25 }} variant="h6" component="div">
-                            Let's Have a Tour
-                        </Typography>
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/emergencyDentalCare'>
-                                Terms and Conditions 
-                        </Link>
-                        <br />
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/checkUp'>
-                                Privacy Policy
-                        </Link>
-                        <br />
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/checkUp'>
-                                Laws and Regulations
-                        </Link>
-                    </Grid>
-                    <Grid item style={{ textAlign: 'left'}} xs={6} md={3}>
-                        <Typography sx={{ my:2, fontSize: 18, fontWeight: 600 }} style={{color: 'red', fontWeight: 500, fontSize: 25 }} variant="h6" component="div">
-                            Our Outlets
-                        </Typography>
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/emergencyDentalCare'>
-                                Dhanmondi 
-                        </Link>
-                        <br />
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/checkUp'>
-                                Uttara
-                        </Link>
-                        <br />
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/checkUp'>
-                                Banani
-                        </Link>
-                        <br />
-                        <Link 
-                            style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/checkUp'>
-                                Bashundhara 
-                        </Link>
-                    </Grid>
-                    <Grid item style={{ textAlign: 'left'}} xs={6} md={3}>
-                        <Typography sx={{ my:2, fontSize: 18, fontWeight: 600 }} style={{color: 'red', fontWeight: 500, fontSize: 25 }} variant="h6" component="div">
-                            Head Office
+                            Our Address
                         </Typography>
                         <Typography sx={{ fontSize: 16, fontWeight: 400 }} style={{color: 'red', fontWeight: 500, fontSize: 16 }} variant="" component="div">
                                 Bashundhara Baridhara <br />
@@ -128,7 +78,7 @@ const Footer = () => {
                             </Button>
                         </a>
 
-                        <Typography sx={{ mt:7, fontSize: 16, fontWeight: 400, color:'red' }} variant="" component="div">
+                        <Typography sx={{ mt:7, fontSize: 16, fontWeight: 400 }} variant="" component="div">
                                 Call Now
                         </Typography>
                         <a href="tel:+8801773241632" style={{ textDecoration:'none', color:'white' }}>
@@ -140,7 +90,7 @@ const Footer = () => {
                 </Grid>
             </Box>
         </Container>
-        <Typography sx={{ p:2, fontSize: 14, fontWeight: 400, color: 'red' }} variant="" component="div">
+        <Typography sx={{ p:2, mt:7, fontSize: 14, fontWeight: 400 }} variant="" component="div">
             Copyright &copy; 2022 - All Rights Reserved 
         </Typography>
     </div>

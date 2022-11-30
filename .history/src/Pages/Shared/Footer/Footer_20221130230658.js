@@ -82,25 +82,25 @@ const Footer = () => {
                         <Link 
                             style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
                             to = '/emergencyDentalCare'>
-                                Dhanmondi 
+                                Most Adorable Puppies 
                         </Link>
                         <br />
                         <Link 
                             style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
                             to = '/checkUp'>
-                                Uttara
+                                Puppies Foods
                         </Link>
                         <br />
                         <Link 
                             style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
                             to = '/checkUp'>
-                                Banani
+                                Puppies Health Check
                         </Link>
                         <br />
                         <Link 
                             style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
                             to = '/checkUp'>
-                                Bashundhara 
+                                Puppies Vaccines
                         </Link>
                     </Grid>
                     <Grid item style={{ textAlign: 'left'}} xs={6} md={3}>
