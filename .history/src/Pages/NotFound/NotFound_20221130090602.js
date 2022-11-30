@@ -3,8 +3,6 @@ import Typography from '@mui/material/Typography';
 import { NavLink } from 'react-router-dom';
 import { Button } from '@mui/material';
 import errorIMG from '../../images/dribbble_1.gif'
-// import errorIMG from '../../images/dog-404-error.jpg'
-
 
 const NotFound = () => {
     return (
