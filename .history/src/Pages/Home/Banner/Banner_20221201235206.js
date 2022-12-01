@@ -8,9 +8,9 @@ const Banner = () => {
                 Head Banner
             </Typography> */}
             <img style={{ width: '100%'}} src="https://i.ibb.co/Mnn0NX3/dog-cover-1.jpg" alt="dog-human playing" />
-            <Typography sx={{ mt: -25, mb:20, color: 'red', fontWeight: 700 }} variant="h4" component="div">
+            <Typography sx={{ mt: -30, color: 'red', fontWeight: 600 }} variant="h4" component="div">
                 Dogs are not only pets;
-                <br /> <br />
+                <br />
                 They are "L O V E"
             </Typography>
         </div>
