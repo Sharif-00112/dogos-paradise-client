@@ -86,7 +86,7 @@ const Navigation = () => {
 
     return (
         <div>
-            <AppBar style={{backgroundColor: 'orange'}} position="static">
+            <AppBar position="static">
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                     {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
@@ -148,8 +148,8 @@ const Navigation = () => {
                     <Typography
                         variant="h4"
                         noWrap
-                        component="a"s
-                        href="/"
+                        component="a"
+                        href=""
                         sx={{
                         mr: 2,
                         display: { xs: 'flex', md: 'none' },
