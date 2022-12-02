@@ -7,7 +7,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 
 const Dog = (props) => {
-    const {title, age, breed, image, price} = props.dog
+    const {title, age, breed, image, price, description} = props.dog
     return (
         <div>
             <Card sx={{ maxWidth: 400 }}>
@@ -27,7 +27,8 @@ const Dog = (props) => {
                         Breed: {breed}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                        Price: {price} $
+                    Lizards are a widespread group of squamate reptiles, with over 6,000
+                    species, ranging across all continents except Antarctica
                     </Typography>
                 </CardContent>
                 <CardActions>

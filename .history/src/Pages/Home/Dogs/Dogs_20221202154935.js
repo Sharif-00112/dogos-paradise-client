@@ -98,10 +98,10 @@ const Dogs = () => {
     }, []);
 
     return (
-        <div>
-            <Box sx={{ flexGrow: 1, backgroundColor:"lightblue", py:6 }}>
+        <div sx={{backgroundColor: 'pink'}}>
+            <Box sx={{ flexGrow: 1 }}>
                 <Container>
-                    <Typography sx={{ p:3, color: 'red', fontWeight: 600 }} variant="h4" component="div">
+                    <Typography sx={{ m: 3, color: 'red', fontWeight: 600 }} variant="h4" component="div">
                         Dogs Waiting for you to adapt
                     </Typography>
 

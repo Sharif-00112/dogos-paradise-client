@@ -19,13 +19,13 @@ const Footer = () => {
                         </Typography>
                         <Link 
                             style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/dogs'>
+                            to = '/emergencyDentalCare'>
                                 Most Adorable Puppies 
                         </Link>
                         <br />
                         <Link 
                             style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/foods'>
+                            to = '/checkUp'>
                                 Puppies Foods
                         </Link>
                         <br />
@@ -37,19 +37,19 @@ const Footer = () => {
                         <br />
                         <Link 
                             style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/vaccine'>
+                            to = '/checkUp'>
                                 Puppies Vaccines
                         </Link>
                         <br />
                         <Link 
                             style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/breeding'>
+                            to = '/checkUp'>
                                 Puppies Breeding
                         </Link>
                         <br />
                         <Link 
                             style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/cages'>
+                            to = '/checkUp'>
                                 Puppies Cages
                         </Link>
                     </Grid>
@@ -59,25 +59,25 @@ const Footer = () => {
                         </Typography>
                         <Link 
                             style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/termsAndConditions'>
+                            to = '/emergencyDentalCare'>
                                 Terms and Conditions 
                         </Link>
                         <br />
                         <Link 
                             style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/privacyPolicy'>
+                            to = '/checkUp'>
                                 Privacy Policy
                         </Link>
                         <br />
                         <Link 
                             style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/rulesAndRegulations'>
+                            to = '/checkUp'>
                                 Laws and Regulations
                         </Link>
                         <br />
                         <Link 
                             style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/faq'>
+                            to = '/checkUp'>
                                 FAQ
                         </Link>
                     </Grid>
@@ -87,25 +87,25 @@ const Footer = () => {
                         </Typography>
                         <Link 
                             style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/outlets/dhanmondi'>
+                            to = '/emergencyDentalCare'>
                                 Dhanmondi 
                         </Link>
                         <br />
                         <Link 
                             style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/outlets/uttara'>
+                            to = '/checkUp'>
                                 Uttara
                         </Link>
                         <br />
                         <Link 
                             style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/outlets/banani'>
+                            to = '/checkUp'>
                                 Banani
                         </Link>
                         <br />
                         <Link 
                             style={{ textDecoration:'none', color: 'red', fontWeight: 500, fontSize: 16 }} 
-                            to = '/outlets/bashundhara'>
+                            to = '/checkUp'>
                                 Bashundhara 
                         </Link>
                     </Grid>

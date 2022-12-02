@@ -94,14 +94,15 @@ const Dogs = () => {
     useEffect(() => {
         fetch('http://localhost:3005/dogs')
         .then(res => res.json())
+        // .then(data => console.log(data))
         .then(data => setDogs(data))
     }, []);
 
     return (
         <div>
-            <Box sx={{ flexGrow: 1, backgroundColor:"lightblue", py:6 }}>
+            <Box sx={{ flexGrow: 1 }}>
                 <Container>
-                    <Typography sx={{ p:3, color: 'red', fontWeight: 600 }} variant="h4" component="div">
+                    <Typography sx={{ m: 3, color: 'red', fontWeight: 600 }} variant="h4" component="div">
                         Dogs Waiting for you to adapt
                     </Typography>
 
@@ -114,6 +115,7 @@ const Dogs = () => {
                                         dog = {dog}
                                     ></Dog>
                                 </Grid>
+                                // console.log(dog)
                             ))
                         }
                     </Grid>

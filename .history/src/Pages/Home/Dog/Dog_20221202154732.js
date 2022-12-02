@@ -7,7 +7,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 
 const Dog = (props) => {
-    const {title, age, breed, image, price} = props.dog
+    const {title, age, breed, image, price, description} = props.dog
     return (
         <div>
             <Card sx={{ maxWidth: 400 }}>

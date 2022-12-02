@@ -89,7 +89,7 @@ import Dog from '../Dog/Dog';
 // ]
 
 const Dogs = () => {
-    const [dogs, setDogs] = useState([]);
+    const [dogs, setDogs] = useState({});
 
     useEffect(() => {
         fetch('http://localhost:3005/dogs')
@@ -99,9 +99,9 @@ const Dogs = () => {
 
     return (
         <div>
-            <Box sx={{ flexGrow: 1, backgroundColor:"lightblue", py:6 }}>
+            <Box sx={{ flexGrow: 1 }}>
                 <Container>
-                    <Typography sx={{ p:3, color: 'red', fontWeight: 600 }} variant="h4" component="div">
+                    <Typography sx={{ m: 3, color: 'red', fontWeight: 600 }} variant="h4" component="div">
                         Dogs Waiting for you to adapt
                     </Typography>
 
@@ -109,11 +109,11 @@ const Dogs = () => {
                         {
                             dogs.map(dog => (
                                 <Grid xs={2} sm={4} md={4} key={dog._id}>
-                                    <Dog
-                                        key= {dog._id}
-                                        dog = {dog}
-                                    ></Dog>
-                                </Grid>
+                                <Dog
+                                    key= {dog._id}
+                                    dog = {dog}
+                                ></Dog>
+                            </Grid>
                             ))
                         }
                     </Grid>
