@@ -123,12 +123,12 @@ const Footer = () => {
                                 FB
                             </Button>
                         </a>
-                        <a href="https://www.google.com/" target="blank" style={{ textDecoration:'none', color:'white' }}>
+                        <a href="https://www.google.com/" target="_blank" style={{ textDecoration:'none', color:'white' }}>
                             <Button sx={{ mt:3, mr:2 }} variant="contained" style={{backgroundColor: 'coral'}}>
                                 G+
                             </Button>
                         </a>
-                        <a href="https://twitter.com/" target="blank" style={{ textDecoration:'none', color:'white' }}>
+                        <a href="https://twitter.com/" target="_blank" style={{ textDecoration:'none', color:'white' }}>
                             <Button sx={{ mt:3, mr:2 }} variant="contained" style={{backgroundColor: 'coral'}}>
                                 TW
                             </Button>
