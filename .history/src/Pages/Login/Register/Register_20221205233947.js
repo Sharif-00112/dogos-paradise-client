@@ -1,14 +1,16 @@
 import React from 'react';
 import { Typography } from '@mui/material';
+import Navigation from '../../Shared/Navigation/Navigation';
 
-const Login = () => {
+const Register = () => {
     return (
         <div>
+            <Navigation></Navigation>
             <Typography sx={{ m: 3, color: 'coral', fontWeight: 600 }} variant="h4" component="div">
-                Login
+                Register
             </Typography>
         </div>
     );
 };
 
-export default Login;
+export default Register;
