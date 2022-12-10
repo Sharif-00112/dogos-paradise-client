@@ -50,7 +50,7 @@ const ManageProducts = () => {
 
     return (
         <div>
-            <Typography sx={{ pb:3, color: 'coral', fontWeight: 600 }} variant="h4" component="div">
+            <Typography sx={{ pb:3, color: 'coral', fontWeight: 600 }} variant="h5" component="div">
                 Manage All Products
             </Typography>
             <Typography sx={{ pb:2, color: 'gray', fontWeight: 600 }} variant="h5" component="div">
@@ -59,16 +59,11 @@ const ManageProducts = () => {
 
             <Button 
             onClick={handleAddNewDog}
-            sx={{mb:2, px:10}}
             size="small" 
             variant="contained" 
-            style={{backgroundColor: 'coral'}}>
+            style={{backgroundColor: 'gray'}}>
                 Add a new Dog?
             </Button>
-
-            <Typography sx={{ pb:2, color: 'gray', fontWeight: 400 }} variant="h6" component="div">
-                {dogs.length} Existing Dogs
-            </Typography>
 
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 550 }} aria-label="Appointments table">
@@ -93,10 +88,10 @@ const ManageProducts = () => {
                             <TableCell component="th" scope="row">
                                 {row.title}
                             </TableCell>
-                            <TableCell align="center">{row.age}M</TableCell>
-                            <TableCell align="center">{row.breed}</TableCell>
+                            <TableCell align="center">{row.age}</TableCell>
+                            <TableCell align="center">{ row.breed}</TableCell>
                             <TableCell align="left">{row.image}</TableCell>
-                            <TableCell align="center">{row.price}$</TableCell>
+                            <TableCell align="center">{row.price}</TableCell>
                             <TableCell align="left">{row.description}</TableCell>
                             <TableCell align="center">{<Button 
                                 onClick={() => handleEditDog(row._id)}

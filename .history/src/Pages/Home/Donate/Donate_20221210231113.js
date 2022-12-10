@@ -2,19 +2,19 @@ import React from 'react';
 import { Typography } from '@mui/material';
 
 
-const DashboardHome = () => {
+const Donate = () => {
     return (
         <div>
             <hr />
-            <Typography sx={{ pb:4, color: 'coral', fontWeight: 600 }} variant="h5" component="div">
-                -Dashboard Home-
+            <Typography sx={{ m: 3, color: 'coral', fontWeight: 600 }} variant="h4" component="div">
+                Contribute to our social works
             </Typography>
             <Typography sx={{ m: 3, color: 'coral', fontWeight: 400 }} variant="h6" component="div">
-                Please Login as ADMIN for more options
+                Coming soon...
             </Typography>
             <hr />
         </div>
     );
 };
 
-export default DashboardHome;
+export default Donate;

@@ -10,41 +10,23 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 
 
- 
-const Messages = () => {
-    const [allMessages, setAllMessages] = useState([]);
+const ManageProducts = () => {
+    const [dogs, setDogs] = useState([]);
 
     useEffect( () =>{
-        const url = `http://localhost:3005/messages`
+        const url = `http://localhost:3005/dogs`
         fetch(url)
         .then(res => res.json())
-        .then(data => setAllMessages(data))
+        .then(data => setDogs(data))
     },[])
-
-    const handleDeleteMessage = id =>{
-        const proceed = window.confirm('Are you sure you want to delete?');
-        if(proceed){
-            const url = `http://localhost:3005/messages/${id}`;
-            fetch(url, {
-                method: 'DELETE'
-            })
-            .then(res => res.json())
-            .then(data => {
-                if(data.deletedCount > 0){
-                    alert('Deleted Successfully!')
-
-                    // update the UI (or, set [messages] dependency instead of it)
-                    const remainingMessages = allMessages.filter(message => message._id !== id);
-                    setAllMessages(remainingMessages);
-                }
-            })
-        }
-    }
 
     return (
         <div>
-            <Typography sx={{ pb:4, color: 'coral', fontWeight: 600 }} variant="h5" component="div">
-                All Messages:
+            <Typography sx={{ pb:3, color: 'coral', fontWeight: 600 }} variant="h5" component="div">
+                Manage All Products
+            </Typography>
+            <Typography sx={{ pb:2, color: 'gray', fontWeight: 600 }} variant="h5" component="div">
+                DOGS
             </Typography>
 
             <TableContainer component={Paper}>
@@ -87,4 +69,4 @@ const Messages = () => {
     );
 };
 
-export default Messages;
+export default ManageProducts;

@@ -59,7 +59,7 @@ const ManageProducts = () => {
 
             <Button 
             onClick={handleAddNewDog}
-            sx={{mb:2, px:10}}
+            sx={{mb:2, px:5}}
             size="small" 
             variant="contained" 
             style={{backgroundColor: 'coral'}}>
@@ -67,7 +67,7 @@ const ManageProducts = () => {
             </Button>
 
             <Typography sx={{ pb:2, color: 'gray', fontWeight: 400 }} variant="h6" component="div">
-                {dogs.length} Existing Dogs
+                Existing Dogs
             </Typography>
 
             <TableContainer component={Paper}>
@@ -93,10 +93,10 @@ const ManageProducts = () => {
                             <TableCell component="th" scope="row">
                                 {row.title}
                             </TableCell>
-                            <TableCell align="center">{row.age}M</TableCell>
-                            <TableCell align="center">{row.breed}</TableCell>
+                            <TableCell align="center">{row.age}</TableCell>
+                            <TableCell align="center">{ row.breed}</TableCell>
                             <TableCell align="left">{row.image}</TableCell>
-                            <TableCell align="center">{row.price}$</TableCell>
+                            <TableCell align="center">{row.price}</TableCell>
                             <TableCell align="left">{row.description}</TableCell>
                             <TableCell align="center">{<Button 
                                 onClick={() => handleEditDog(row._id)}

@@ -20,14 +20,6 @@ const ManageProducts = () => {
         .then(data => setDogs(data))
     },[])
 
-    const handleAddNewDog= () => {
-
-    }
-
-    const handleEditDog = id =>{
-
-    }
-
     const handleDeleteDog = id =>{
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
@@ -50,24 +42,11 @@ const ManageProducts = () => {
 
     return (
         <div>
-            <Typography sx={{ pb:3, color: 'coral', fontWeight: 600 }} variant="h4" component="div">
+            <Typography sx={{ pb:3, color: 'coral', fontWeight: 600 }} variant="h5" component="div">
                 Manage All Products
             </Typography>
             <Typography sx={{ pb:2, color: 'gray', fontWeight: 600 }} variant="h5" component="div">
                 DOGS
-            </Typography>
-
-            <Button 
-            onClick={handleAddNewDog}
-            sx={{mb:2, px:10}}
-            size="small" 
-            variant="contained" 
-            style={{backgroundColor: 'coral'}}>
-                Add a new Dog?
-            </Button>
-
-            <Typography sx={{ pb:2, color: 'gray', fontWeight: 400 }} variant="h6" component="div">
-                {dogs.length} Existing Dogs
             </Typography>
 
             <TableContainer component={Paper}>
@@ -76,11 +55,11 @@ const ManageProducts = () => {
                     <TableRow>
                         <TableCell>Title</TableCell>
                         <TableCell align="center">Age</TableCell>
-                        <TableCell align="center">Breed</TableCell>
-                        <TableCell align="center">Image</TableCell>
-                        <TableCell align="center">Price</TableCell>
-                        <TableCell align="center">Description</TableCell>
-                        <TableCell align="center">Edit?</TableCell>
+                        <TableCell align="right">Breed</TableCell>
+                        <TableCell align="right">Image</TableCell>
+                        <TableCell align="right">Price</TableCell>
+                        <TableCell align="right">Description</TableCell>
+                        <TableCell align="right">Edit?</TableCell>
                         <TableCell align="right">Delete?</TableCell>
                     </TableRow>
                     </TableHead>
@@ -93,16 +72,16 @@ const ManageProducts = () => {
                             <TableCell component="th" scope="row">
                                 {row.title}
                             </TableCell>
-                            <TableCell align="center">{row.age}M</TableCell>
-                            <TableCell align="center">{row.breed}</TableCell>
-                            <TableCell align="left">{row.image}</TableCell>
-                            <TableCell align="center">{row.price}$</TableCell>
-                            <TableCell align="left">{row.description}</TableCell>
-                            <TableCell align="center">{<Button 
+                            <TableCell align="center">{row.age}</TableCell>
+                            <TableCell align="right">{ row.breed}</TableCell>
+                            <TableCell align="right">{row.image}</TableCell>
+                            <TableCell align="right">{row.price}</TableCell>
+                            <TableCell align="right">{row.description}</TableCell>
+                            <TableCell align="right">{<Button 
                                 onClick={() => handleEditDog(row._id)}
                                 size="small" 
                                 variant="contained" 
-                                style={{backgroundColor: 'gray'}}>
+                                style={{backgroundColor: 'red'}}>
                                     Edit
                                 </Button> }
                             </TableCell>

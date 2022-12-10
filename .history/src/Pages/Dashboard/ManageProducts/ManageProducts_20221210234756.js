@@ -93,7 +93,7 @@ const ManageProducts = () => {
                             <TableCell component="th" scope="row">
                                 {row.title}
                             </TableCell>
-                            <TableCell align="center">{row.age}M</TableCell>
+                            <TableCell align="center">{row.age} M</TableCell>
                             <TableCell align="center">{row.breed}</TableCell>
                             <TableCell align="left">{row.image}</TableCell>
                             <TableCell align="center">{row.price}$</TableCell>

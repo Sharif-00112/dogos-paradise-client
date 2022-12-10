@@ -10,7 +10,7 @@ const DashboardHome = () => {
                 -Dashboard Home-
             </Typography>
             <Typography sx={{ m: 3, color: 'coral', fontWeight: 400 }} variant="h6" component="div">
-                Please Login as ADMIN for more options
+                Please Login as Admin for more options
             </Typography>
             <hr />
         </div>

@@ -10,21 +10,20 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 
 
- 
-const Messages = () => {
-    const [allMessages, setAllMessages] = useState([]);
+const ManageProducts = () => {
+    const [dogs, setDogs] = useState([]);
 
     useEffect( () =>{
-        const url = `http://localhost:3005/messages`
+        const url = `http://localhost:3005/dogs`
         fetch(url)
         .then(res => res.json())
-        .then(data => setAllMessages(data))
+        .then(data => setDogs(data))
     },[])
 
-    const handleDeleteMessage = id =>{
+    const handleDeleteDog = id =>{
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
-            const url = `http://localhost:3005/messages/${id}`;
+            const url = `http://localhost:3005/dogs/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -33,9 +32,9 @@ const Messages = () => {
                 if(data.deletedCount > 0){
                     alert('Deleted Successfully!')
 
-                    // update the UI (or, set [messages] dependency instead of it)
-                    const remainingMessages = allMessages.filter(message => message._id !== id);
-                    setAllMessages(remainingMessages);
+                    // update the UI (or, set [dogs] dependency instead of it)
+                    const remainingDogs = dogs.filter(dog => dog._id !== id);
+                    setDogs(remainingDogs);
                 }
             })
         }
@@ -43,8 +42,11 @@ const Messages = () => {
 
     return (
         <div>
-            <Typography sx={{ pb:4, color: 'coral', fontWeight: 600 }} variant="h5" component="div">
-                All Messages:
+            <Typography sx={{ pb:3, color: 'coral', fontWeight: 600 }} variant="h5" component="div">
+                Manage All Products
+            </Typography>
+            <Typography sx={{ pb:2, color: 'gray', fontWeight: 600 }} variant="h5" component="div">
+                DOGS
             </Typography>
 
             <TableContainer component={Paper}>
@@ -59,7 +61,7 @@ const Messages = () => {
                     </TableRow>
                     </TableHead>
                     <TableBody>
-                    {allMessages.map((row) => (
+                    {dogs.map((row) => (
                         <TableRow
                         key={row._id}
                         sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -71,7 +73,7 @@ const Messages = () => {
                             <TableCell align="right">{ row.message}</TableCell>
                             <TableCell align="right">{row.time }</TableCell>
                             <TableCell align="right">{<Button 
-                                onClick={() => handleDeleteMessage(row._id)}
+                                onClick={() => handleDeleteDog(row._id)}
                                 size="small" 
                                 variant="contained" 
                                 style={{backgroundColor: 'red'}}>
@@ -87,4 +89,4 @@ const Messages = () => {
     );
 };
 
-export default Messages;
+export default ManageProducts;
