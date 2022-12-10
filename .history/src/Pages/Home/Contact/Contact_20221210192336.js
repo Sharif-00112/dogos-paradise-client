@@ -35,7 +35,7 @@ const Contact = () => {
         //collect form data 
         const message = {
             ...contactData,
-            time: new Date().toLocaleDateString()
+            time: new Date()
         }
         // console.log(message);
 

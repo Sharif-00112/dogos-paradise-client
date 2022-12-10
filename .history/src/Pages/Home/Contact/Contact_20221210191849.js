@@ -35,25 +35,15 @@ const Contact = () => {
         //collect form data 
         const message = {
             ...contactData,
-            time: new Date().toLocaleDateString()
+            time: new Date()
         }
-        // console.log(message);
+        console.log(message);
+
 
         //send data to the server and database
-        fetch('http://localhost:3005/messages', {
-            method: 'POST',
-            headers: {
-                'content-type' : 'application/json'
-            },
-            body: JSON.stringify(message)
-        })
-        .then(res => res.json())
-        .then(data => {
-            // console.log(data);
-            if(data.insertedId){
-                alert('Message Submitted Successfully!');
-            }
-        })
+
+
+        alert('Submitted Successfully!');
     }
 
     return (

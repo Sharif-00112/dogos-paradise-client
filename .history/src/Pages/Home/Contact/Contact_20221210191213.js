@@ -3,10 +3,11 @@ import React, { useState } from 'react';
 import Typography from '@mui/material/Typography';
 import {Button} from '@mui/material';
 import TextField from '@mui/material/TextField';
+import useAuth from '../../../hooks/useAuth';
 
 const bg = 'https://i.ibb.co/hXGz3qW/dog-group.jpg';
 
-const contactBanner = {
+const appointmentBanner = {
     background: `url(${bg}) no-repeat center center`,
     // marginTop: 100,
     backgroundPosition: 'center',
@@ -16,6 +17,7 @@ const contactBanner = {
 }
 
 const Contact = () => {
+    const {user} = useAuth(); 
     const [contactData, setContactData] = useState({});
 
     const handleOnChange = e =>{
@@ -33,31 +35,21 @@ const Contact = () => {
         e.preventDefault();
 
         //collect form data 
-        const message = {
+        const appointment = {
             ...contactData,
-            time: new Date().toLocaleDateString()
+            time: new Date()
         }
-        // console.log(message);
+        console.log(appointment);
+
 
         //send data to the server and database
-        fetch('http://localhost:3005/messages', {
-            method: 'POST',
-            headers: {
-                'content-type' : 'application/json'
-            },
-            body: JSON.stringify(message)
-        })
-        .then(res => res.json())
-        .then(data => {
-            // console.log(data);
-            if(data.insertedId){
-                alert('Message Submitted Successfully!');
-            }
-        })
+
+
+        alert('Submitted Successfully!');
     }
 
     return (
-        <div style={contactBanner}>
+        <div style={appointmentBanner}>
             {/* <h2>Contact us</h2> */}
             <Container sx={{}}>
                 <Typography sx={{ py: 5, fontWeight: 500 }} style={{color: 'coral'}} variant="h4" component="div">

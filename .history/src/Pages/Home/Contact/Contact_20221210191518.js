@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Typography from '@mui/material/Typography';
 import {Button} from '@mui/material';
 import TextField from '@mui/material/TextField';
+import useAuth from '../../../hooks/useAuth';
 
 const bg = 'https://i.ibb.co/hXGz3qW/dog-group.jpg';
 
@@ -16,6 +17,7 @@ const contactBanner = {
 }
 
 const Contact = () => {
+    const {user} = useAuth(); 
     const [contactData, setContactData] = useState({});
 
     const handleOnChange = e =>{
@@ -35,25 +37,15 @@ const Contact = () => {
         //collect form data 
         const message = {
             ...contactData,
-            time: new Date().toLocaleDateString()
+            time: new Date()
         }
         // console.log(message);
 
+
         //send data to the server and database
-        fetch('http://localhost:3005/messages', {
-            method: 'POST',
-            headers: {
-                'content-type' : 'application/json'
-            },
-            body: JSON.stringify(message)
-        })
-        .then(res => res.json())
-        .then(data => {
-            // console.log(data);
-            if(data.insertedId){
-                alert('Message Submitted Successfully!');
-            }
-        })
+
+
+        alert('Submitted Successfully!');
     }
 
     return (

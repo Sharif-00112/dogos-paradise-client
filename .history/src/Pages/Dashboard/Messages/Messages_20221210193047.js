@@ -33,7 +33,6 @@ const Messages = () => {
                         <TableCell align="center">Subject</TableCell>
                         <TableCell align="right">Message</TableCell>
                         <TableCell align="right">Sent at</TableCell>
-                        <TableCell align="right">Action</TableCell>
                     </TableRow>
                     </TableHead>
                     <TableBody>
@@ -47,7 +46,6 @@ const Messages = () => {
                         </TableCell>
                         <TableCell align="center">{row.subject}</TableCell>
                         <TableCell align="right">{ row.message}</TableCell>
-                        <TableCell align="right">{row.time }</TableCell>
                         <TableCell align="right">{ }</TableCell>
                         </TableRow>
                     ))}

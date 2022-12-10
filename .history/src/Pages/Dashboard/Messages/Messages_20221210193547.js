@@ -47,7 +47,7 @@ const Messages = () => {
                         </TableCell>
                         <TableCell align="center">{row.subject}</TableCell>
                         <TableCell align="right">{ row.message}</TableCell>
-                        <TableCell align="right">{row.time }</TableCell>
+                        <TableCell align="right">{row.time.toDateString() }</TableCell>
                         <TableCell align="right">{ }</TableCell>
                         </TableRow>
                     ))}

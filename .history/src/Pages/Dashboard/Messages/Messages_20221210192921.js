@@ -29,10 +29,9 @@ const Messages = () => {
                 <Table sx={{ minWidth: 550 }} aria-label="Appointments table">
                     <TableHead>
                     <TableRow>
-                        <TableCell>Sender</TableCell>
-                        <TableCell align="center">Subject</TableCell>
-                        <TableCell align="right">Message</TableCell>
-                        <TableCell align="right">Sent at</TableCell>
+                        <TableCell>Email</TableCell>
+                        <TableCell align="center">User Name</TableCell>
+                        <TableCell align="right">Role</TableCell>
                         <TableCell align="right">Action</TableCell>
                     </TableRow>
                     </TableHead>
@@ -45,9 +44,8 @@ const Messages = () => {
                         <TableCell component="th" scope="row">
                             {row.email}
                         </TableCell>
-                        <TableCell align="center">{row.subject}</TableCell>
-                        <TableCell align="right">{ row.message}</TableCell>
-                        <TableCell align="right">{row.time }</TableCell>
+                        <TableCell align="center">{row.displayName}</TableCell>
+                        <TableCell align="right">{ row.role }</TableCell>
                         <TableCell align="right">{ }</TableCell>
                         </TableRow>
                     ))}

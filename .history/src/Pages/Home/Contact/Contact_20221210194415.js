@@ -35,7 +35,8 @@ const Contact = () => {
         //collect form data 
         const message = {
             ...contactData,
-            time: new Date().toLocaleDateString()
+            time: new Date().toLocaleDateString(),
+            time2: new Intl.DateTimeFormat('en').formatToParts()
         }
         // console.log(message);
 

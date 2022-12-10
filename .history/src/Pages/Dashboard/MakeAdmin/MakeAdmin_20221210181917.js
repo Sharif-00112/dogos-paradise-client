@@ -2,8 +2,6 @@ import { Button, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import Alert from '@mui/material/Alert';
 import useAuth from '../../../hooks/useAuth';
-import { Typography } from '@mui/material';
-
 
 
 const MakeAdmin = () => {
@@ -38,9 +36,7 @@ const MakeAdmin = () => {
 
     return (
         <div>
-            <Typography sx={{ pb:4, color: 'coral', fontWeight: 600 }} variant="h5" component="div">
-                Make an Admin:
-            </Typography>
+            <h2>Make an Admin</h2>
 
             <form onSubmit={handleAdminSubmit}>
                 <TextField

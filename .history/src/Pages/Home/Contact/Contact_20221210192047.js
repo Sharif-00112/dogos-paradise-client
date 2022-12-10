@@ -35,7 +35,7 @@ const Contact = () => {
         //collect form data 
         const message = {
             ...contactData,
-            time: new Date().toLocaleDateString()
+            time: new Date()
         }
         // console.log(message);
 
@@ -51,7 +51,7 @@ const Contact = () => {
         .then(data => {
             // console.log(data);
             if(data.insertedId){
-                alert('Message Submitted Successfully!');
+                alert('Appointment Submitted Successfully!');
             }
         })
     }
