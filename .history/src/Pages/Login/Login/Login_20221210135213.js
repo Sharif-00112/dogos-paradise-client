@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
 import { Button, Container } from '@mui/material';
 import Typography from '@mui/material/Typography';
+// import loginImg from '../../../images/images/login.png'
 import TextField from '@mui/material/TextField';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
@@ -16,6 +17,7 @@ const Login = () => {
     //destructuring hooks
     // const { customLogin, signInUsingGoogle, signInUsingFacebook, user, error, handleLoginSubmitBtn, handleEmailChange, handlePasswordChange, logout } = useAuth();
     const { customLogin, user, error, isLoading, signInUsingGoogle } = useAuth();
+    // console.log(user.photoURL);
 
     useTitle("Login");
 
@@ -37,16 +39,9 @@ const Login = () => {
 
     return (
         <div className="">
-            {
-                user?.email ?
-                    <Typography sx={{ m: 5, color: 'coral', fontWeight: 600 }} variant="h4" component="div">
-                    
-                    </Typography>
-                :
-                    <Typography sx={{ m: 5, color: 'coral', fontWeight: 600 }} variant="h4" component="div">
-                        Login
-                    </Typography>
-            }
+            <Typography sx={{ m: 5, color: 'coral', fontWeight: 600 }} variant="h4" component="div">
+                Login
+            </Typography>
             <Container sx={{ mb:5 }}>
                 <Box sx={{ flexGrow: 1 }}>
                     <Grid container spacing={2}>

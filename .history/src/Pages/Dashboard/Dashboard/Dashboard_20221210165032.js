@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@mui/material';
 import DashboardHome from '../DashboardHome/DashboardHome';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
-import AdminRoute from '../../Login/AdminRoute/AdminRoute';
+// import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 
 import { 
   Routes,
@@ -140,24 +140,26 @@ function Dashboard(props) {
                 <Toolbar />
 
                 <Routes>
+                    {/* <Route path = 'appointment' element={<Appointment/>}/> */}
                     <Route path = '/' element={<DashboardHome/>}/>
                     <Route path = 'dashboard' element={<DashboardHome/>}/>
-
+                    {/* <Route path = 'makeAdmin' element={<MakeAdmin/>}/> */}
+                    {/* <Route path = 'addDoctor' element={<AddDoctor/>}/> */}
                     {/* way-1 to secure route through AdminRoute  */}
                     <Route path = 'makeAdmin' element = {
-                      <AdminRoute>
+                    //   <AdminRoute>
                         <MakeAdmin></MakeAdmin>
-                      </AdminRoute>
+                    //   </AdminRoute>
                     }> </Route>
                     <Route path = 'manageProducts' element = {
-                      <AdminRoute>
+                    //   <AdminRoute>
                         <ManageProducts></ManageProducts>
-                      </AdminRoute>
+                    //   </AdminRoute>
                     }> </Route>
                     <Route path = 'allUsers' element = {
-                      <AdminRoute>
+                    //   <AdminRoute>
                         <AllUsers></AllUsers>
-                      </AdminRoute>
+                    //   </AdminRoute>
                     }> </Route>
                 </Routes>
                 

@@ -1,13 +1,13 @@
 import { Button, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import Alert from '@mui/material/Alert';
-import useAuth from '../../../hooks/useAuth';
+// import useAuth from '../../../hooks/useAuth';
 
 
 const MakeAdmin = () => {
     const [email, setEmail] = useState('');
     const [success, setSuccess] = useState(false);
-    const {token} = useAuth();
+    // const {token} = useAuth();
 
     const handleAdminSubmit = e =>{
         setSuccess(false);
@@ -16,7 +16,7 @@ const MakeAdmin = () => {
         fetch('http://localhost:3005/users/admin', {
             method: 'PUT',
             headers: {
-                'authorization': `Bearer ${token}`,
+                // 'authorization': `Bearer ${token}`,
                 'content-type': 'application/json'
             },
             body: JSON.stringify(user)

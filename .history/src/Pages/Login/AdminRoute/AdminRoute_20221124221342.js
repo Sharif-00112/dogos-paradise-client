@@ -11,7 +11,7 @@ const AdminRoute = ({children}) => {
     return (
         user.email && admin ? children 
         : 
-        <Navigate to="/dashboard" />
+        <Navigate to="/home" />
     );
 };
 

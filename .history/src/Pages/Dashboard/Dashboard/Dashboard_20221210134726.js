@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@mui/material';
 import DashboardHome from '../DashboardHome/DashboardHome';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
-import AdminRoute from '../../Login/AdminRoute/AdminRoute';
+// import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 
 import { 
   Routes,
@@ -45,6 +45,23 @@ function Dashboard(props) {
         <Button sx={{mx:3}} color="inherit">Dashboard Home</Button>
       </Link>
 
+      {/* erase after admin implementation  */}
+      <Link 
+        style={{ textDecoration:'none', color:'black' }}
+        to = 'manageProducts'>
+        <Button sx={{mx:3}} color="inherit">Manage Products</Button>
+      </Link>
+      <Link 
+        style={{ textDecoration:'none', color:'black' }}
+        to = 'makeAdmin'>
+        <Button sx={{mx:3}} color="inherit">Make Admin</Button>
+      </Link>
+      <Link 
+        style={{ textDecoration:'none', color:'black' }}
+        to = 'allUsers'>
+        <Button sx={{mx:3}} color="inherit">All Users</Button>
+      </Link>
+      {/* erase after admin implementation  */}
 
       {admin && <Box>
         <Link 
@@ -140,24 +157,26 @@ function Dashboard(props) {
                 <Toolbar />
 
                 <Routes>
+                    {/* <Route path = 'appointment' element={<Appointment/>}/> */}
                     <Route path = '/' element={<DashboardHome/>}/>
                     <Route path = 'dashboard' element={<DashboardHome/>}/>
-
+                    {/* <Route path = 'makeAdmin' element={<MakeAdmin/>}/> */}
+                    {/* <Route path = 'addDoctor' element={<AddDoctor/>}/> */}
                     {/* way-1 to secure route through AdminRoute  */}
                     <Route path = 'makeAdmin' element = {
-                      <AdminRoute>
+                    //   <AdminRoute>
                         <MakeAdmin></MakeAdmin>
-                      </AdminRoute>
+                    //   </AdminRoute>
                     }> </Route>
                     <Route path = 'manageProducts' element = {
-                      <AdminRoute>
+                    //   <AdminRoute>
                         <ManageProducts></ManageProducts>
-                      </AdminRoute>
+                    //   </AdminRoute>
                     }> </Route>
                     <Route path = 'allUsers' element = {
-                      <AdminRoute>
+                    //   <AdminRoute>
                         <AllUsers></AllUsers>
-                      </AdminRoute>
+                    //   </AdminRoute>
                     }> </Route>
                 </Routes>
                 
