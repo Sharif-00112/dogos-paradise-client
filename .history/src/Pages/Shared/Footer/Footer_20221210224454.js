@@ -101,7 +101,7 @@ const Footer = () => {
                         <Link 
                             style={{ textDecoration:'none', color: 'coral', fontWeight: 500, fontSize: 16 }} 
                             to = '/nurturingHomelessPuppies'>
-                                Public Awareness
+                                Nurturing Homeless Puppies
                         </Link>
                         <br />
                         <Link 

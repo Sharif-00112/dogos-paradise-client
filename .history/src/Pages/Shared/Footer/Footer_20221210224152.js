@@ -82,32 +82,31 @@ const Footer = () => {
                         </Link>
                     </Grid>
                     <Grid item style={{ textAlign: 'left'}} xs={6} md={3}>
-                        
                         <Typography sx={{ my:2, fontSize: 18, fontWeight: 600 }} style={{color: 'black', fontWeight: 500, fontSize: 25 }} variant="h6" component="div">
-                            Social Campaigns
+                            Our Outlets
                         </Typography>
                         <Link 
                             style={{ textDecoration:'none', color: 'coral', fontWeight: 500, fontSize: 16 }} 
-                            to = '/nurturingHomelessPuppies'>
-                                Nurturing Homeless Puppies
+                            to = '/outlets/dhanmondi'>
+                                Dhanmondi 
                         </Link>
                         <br />
                         <Link 
                             style={{ textDecoration:'none', color: 'coral', fontWeight: 500, fontSize: 16 }} 
-                            to = '/nurturingHomelessPuppies'>
-                                Street Dogs Vaccination
+                            to = '/outlets/uttara'>
+                                Uttara
                         </Link>
                         <br />
                         <Link 
                             style={{ textDecoration:'none', color: 'coral', fontWeight: 500, fontSize: 16 }} 
-                            to = '/nurturingHomelessPuppies'>
-                                Public Awareness
+                            to = '/outlets/banani'>
+                                Banani
                         </Link>
                         <br />
                         <Link 
-                            style={{ textDecoration:'none', color:'whitesmoke' }}
-                            to = '/donate'>
-                            <Button size="medium" variant="contained" style={{backgroundColor: 'green'}} sx={{my:1}}>Donate us</Button>
+                            style={{ textDecoration:'none', color: 'coral', fontWeight: 500, fontSize: 16 }} 
+                            to = '/outlets/bashundhara'>
+                                Bashundhara 
                         </Link>
                     </Grid>
                     <Grid item style={{ textAlign: 'left'}} xs={6} md={3}>

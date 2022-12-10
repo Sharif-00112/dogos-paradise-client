@@ -88,20 +88,8 @@ const Footer = () => {
                         </Typography>
                         <Link 
                             style={{ textDecoration:'none', color: 'coral', fontWeight: 500, fontSize: 16 }} 
-                            to = '/nurturingHomelessPuppies'>
+                            to = '/termsAndConditions'>
                                 Nurturing Homeless Puppies
-                        </Link>
-                        <br />
-                        <Link 
-                            style={{ textDecoration:'none', color: 'coral', fontWeight: 500, fontSize: 16 }} 
-                            to = '/nurturingHomelessPuppies'>
-                                Street Dogs Vaccination
-                        </Link>
-                        <br />
-                        <Link 
-                            style={{ textDecoration:'none', color: 'coral', fontWeight: 500, fontSize: 16 }} 
-                            to = '/nurturingHomelessPuppies'>
-                                Public Awareness
                         </Link>
                         <br />
                         <Link 
