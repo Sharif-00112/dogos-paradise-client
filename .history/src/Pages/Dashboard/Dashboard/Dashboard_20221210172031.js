@@ -59,8 +59,8 @@ function Dashboard(props) {
         </Link>
         <Link 
           style={{ textDecoration:'none', color:'black' }}
-          to = 'manageUsers'>
-          <Button sx={{mx:3}} color="inherit">Manage Users</Button>
+          to = 'allUsers'>
+          <Button sx={{mx:3}} color="inherit">All Users</Button>
         </Link>
       </Box>}
 
