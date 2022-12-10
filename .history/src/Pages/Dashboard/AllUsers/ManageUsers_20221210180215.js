@@ -25,7 +25,7 @@ const ManageUsers = () => {
             </Typography>
 
             <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 550 }} aria-label="Appointments table">
+                <Table sx={{ minWidth: 600 }} aria-label="Appointments table">
                     <TableHead>
                     <TableRow>
                         <TableCell>Email</TableCell>

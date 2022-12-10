@@ -31,7 +31,6 @@ const ManageUsers = () => {
                         <TableCell>Email</TableCell>
                         <TableCell align="center">User Name</TableCell>
                         <TableCell align="right">Role</TableCell>
-                        <TableCell align="right">Action</TableCell>
                     </TableRow>
                     </TableHead>
                     <TableBody>

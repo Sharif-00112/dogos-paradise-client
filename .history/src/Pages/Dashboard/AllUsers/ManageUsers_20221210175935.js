@@ -30,8 +30,11 @@ const ManageUsers = () => {
                     <TableRow>
                         <TableCell>Email</TableCell>
                         <TableCell align="center">User Name</TableCell>
-                        <TableCell align="right">Role</TableCell>
+                        {/* <TableCell align="center">Date</TableCell> */}
+                        {/* <TableCell align="center">Time</TableCell> */}
+                        {/* <TableCell align="center">Payment Status</TableCell> */}
                         <TableCell align="right">Action</TableCell>
+                        {/* <TableCell align="right">Protein&nbsp;(g)</TableCell> */}
                     </TableRow>
                     </TableHead>
                     <TableBody>
@@ -44,8 +47,11 @@ const ManageUsers = () => {
                             {row.email}
                         </TableCell>
                         <TableCell align="center">{row.displayName}</TableCell>
-                        <TableCell align="right">{ row.role }</TableCell>
+                        {/* <TableCell align="center">{row.date}</TableCell> */}
+                        {/* <TableCell align="center">{row.time}</TableCell> */}
+                        {/* <TableCell align="right">Unpaid</TableCell> */}
                         <TableCell align="right">{ }</TableCell>
+                        {/* <TableCell align="right">{row.protein}</TableCell> */}
                         </TableRow>
                     ))}
                     </TableBody>

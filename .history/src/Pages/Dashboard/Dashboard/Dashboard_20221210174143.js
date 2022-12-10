@@ -22,7 +22,6 @@ import {
 import useAuth from '../../../hooks/useAuth';
 import ManageProducts from '../ManageProducts/ManageProducts';
 import ManageUsers from '../AllUsers/ManageUsers';
-import Messages from '../Messages/Messages';
  
 const drawerWidth = 220;
 
@@ -167,7 +166,7 @@ function Dashboard(props) {
                     }> </Route>
                     <Route path = 'messages' element = {
                       <AdminRoute>
-                        <Messages></Messages>
+                        <ManageUsers></ManageUsers>
                       </AdminRoute>
                     }> </Route>
                 </Routes>
