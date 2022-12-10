@@ -12,6 +12,7 @@ import Story from './Pages/Home/Story/Story';
 import CustomerReviews from './Pages/Home/CustomerReviews/CustomerReviews';
 import Blogs from './Pages/Home/Blogs/Blogs';
 import About from './Pages/Home/About/About';
+import Dogs from './Pages/Home/Dogs/Dogs';
 import Navigation from './Pages/Shared/Navigation/Navigation';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Products from './Pages/Home/Products/Products';

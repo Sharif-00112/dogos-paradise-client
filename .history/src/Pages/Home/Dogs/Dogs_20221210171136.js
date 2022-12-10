@@ -7,6 +7,8 @@ import Dog from '../Dog/Dog';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 
+
+
 // const dogs = [
 //     {
 //         title: "Siberian Husky",
@@ -120,11 +122,13 @@ const Dogs = () => {
                         }
                     </Grid>
 
-                    <Link 
-                        style={{ textDecoration:'none', color:'whitesmoke' }}
-                        to = '/products'>
-                        <Button size="medium" variant="contained" style={{backgroundColor: 'coral'}} sx={{mt:4}}>See all Dogs</Button>
-                    </Link>
+                    <Button size="small" variant="contained" style={{backgroundColor: 'orange'}} sx={{mt:3}}>
+                        <Link 
+                            style={{ textDecoration:'none', color:'black' }}
+                            to = '/products'>
+                            See all
+                        </Link>
+                    </Button>
                 </Container>
             </Box>
         </div>
