@@ -46,12 +46,7 @@ const Login = () => {
                 <Box sx={{ flexGrow: 1 }}>
                     <Grid container spacing={2}>
                         <Grid xs={12} md={6}>
-                            {
-                                user?.email ?
-                                <img style={{ width:'70%' }} src= 'https://i.ibb.co/2KvT0nS/dog-post-login-min.jpg' alt="dog-security" />
-                                :
-                                <img style={{ width:'70%' }} src= 'https://i.ibb.co/r0Bzb5B/dog-pre-login-min.jpg' alt="dog-security" />
-                            }
+                            <img style={{ width:'80%' }} src= 'https://i.ibb.co/J5x553c/dog-login.jpg' alt="dog-security" />
                         </Grid>
                         <Grid sx={{ mt:5 }} xs={12} md={6}>
                             

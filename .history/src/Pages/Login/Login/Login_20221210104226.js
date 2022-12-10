@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
 import { Button, Container } from '@mui/material';
 import Typography from '@mui/material/Typography';
-// import loginImg from '../../../images/images/login.png'
+import loginImg from '../../../images/images/login.png'
 import TextField from '@mui/material/TextField';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
@@ -39,24 +39,27 @@ const Login = () => {
 
     return (
         <div className="">
-            <Typography sx={{ m: 5, color: 'coral', fontWeight: 600 }} variant="h4" component="div">
-                Login
-            </Typography>
-            <Container sx={{ mb:5 }}>
+            <Container sx={{ my:5 }}>
                 <Box sx={{ flexGrow: 1 }}>
                     <Grid container spacing={2}>
-                        <Grid xs={12} md={6}>
-                            {
-                                user?.email ?
-                                <img style={{ width:'70%' }} src= 'https://i.ibb.co/2KvT0nS/dog-post-login-min.jpg' alt="dog-security" />
-                                :
-                                <img style={{ width:'70%' }} src= 'https://i.ibb.co/r0Bzb5B/dog-pre-login-min.jpg' alt="dog-security" />
-                            }
-                        </Grid>
                         <Grid sx={{ mt:5 }} xs={12} md={6}>
+                            <Typography sx={{ my:2, fontSize: 25, fontWeight: 600 }} style={{color: '#5CE7ED'}} variant="h4" component="div">
+                                User Login
+                            </Typography>
                             
                             {/* error  */}
                             {error && <Alert severity="error">{error}</Alert>}
+                            
+                            {/* {
+                                user?.email ?
+                                <Typography sx={{ my:2, fontSize: 20, fontWeight: 600 }} style={{color: 'gray'}} variant="h4" component="div">
+                                    Logged in as "{user.email}"
+                                </Typography>
+                                :
+                                <Typography sx={{ my:3, fontSize: 14, fontWeight: 600 }} style={{color: 'gray'}} variant="h4" component="div">
+                                    {error}
+                                </Typography>
+                            } */}
                             
                             { (!isLoading && !user.email) && <form onSubmit={ handleLoginSubmit }>
                                 <TextField 
@@ -103,6 +106,9 @@ const Login = () => {
                             {/* Spinner  */}
                             {isLoading && <CircularProgress />}
 
+                        </Grid>
+                        <Grid xs={12} md={6}>
+                            <img style={{ width:'80%' }} src={loginImg} alt="" />
                         </Grid>
                     </Grid>
                 </Box>

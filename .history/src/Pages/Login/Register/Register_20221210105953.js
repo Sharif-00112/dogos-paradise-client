@@ -51,19 +51,16 @@ const Register = () => {
 
     return (
         <div>
-            <Typography sx={{ m: 5, color: 'coral', fontWeight: 600 }} variant="h4" component="div">
-                Register
-            </Typography>
             <Container sx={{ my:5 }}>
                 <Box sx={{ flexGrow: 1 }}>
                     <Grid container spacing={2}>
                         <Grid xs={12} md={6}>
-                            <img style={{ width:'70%' }} src= 'https://i.ibb.co/r0Bzb5B/dog-pre-login-min.jpg' alt="dog-security" />
+                            <img style={{ width:'80%' }} src= 'https://i.ibb.co/J5x553c/dog-login.jpg' alt="dog-security" />
                         </Grid>
                         <Grid sx={{ mt:5 }} xs={12} md={6}>
-                            {/* <Typography sx={{ my:2, fontSize: 25, fontWeight: 600 }} style={{color: '#5CE7ED'}} variant="h4" component="div">
+                            <Typography sx={{ my:2, fontSize: 25, fontWeight: 600 }} style={{color: '#5CE7ED'}} variant="h4" component="div">
                                 User Registration
-                            </Typography> */}
+                            </Typography>
                                                         
                             {/* error  */}
                             {error && <Alert severity="error">{error}</Alert>}
