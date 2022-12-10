@@ -21,24 +21,8 @@ const Messages = () => {
         .then(data => setAllMessages(data))
     },[])
 
-    const handleDeleteMessage = id =>{
-        const proceed = window.confirm('Are you sure you want to delete?');
-        if(proceed){
-            const url = `http://localhost:3005/messages/${id}`;
-            fetch(url, {
-                method: 'DELETE'
-            })
-            .then(res => res.json())
-            .then(data => {
-                if(data.deletedCount > 0){
-                    alert('Deleted Successfully!')
-
-                    // update the UI (or, set [messages] dependency instead of it)
-                    const remainingMessages = allMessages.filter(product => product._id !== id);
-                    setAllMessages(remainingMessages);
-                }
-            })
-        }
+    const deleteMessage = () =>{
+        
     }
 
     return (
@@ -71,11 +55,11 @@ const Messages = () => {
                             <TableCell align="right">{ row.message}</TableCell>
                             <TableCell align="right">{row.time }</TableCell>
                             <TableCell align="right">{<Button 
-                                onClick={() => handleDeleteMessage(row._id)}
+                                onClick={deleteMessage}
                                 size="small" 
                                 variant="contained" 
                                 style={{backgroundColor: 'red'}}>
-                                    Delete
+                                Delete
                                 </Button> }
                             </TableCell>
                         </TableRow>

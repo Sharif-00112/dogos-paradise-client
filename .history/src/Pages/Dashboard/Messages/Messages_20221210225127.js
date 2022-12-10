@@ -21,26 +21,6 @@ const Messages = () => {
         .then(data => setAllMessages(data))
     },[])
 
-    const handleDeleteMessage = id =>{
-        const proceed = window.confirm('Are you sure you want to delete?');
-        if(proceed){
-            const url = `http://localhost:3005/messages/${id}`;
-            fetch(url, {
-                method: 'DELETE'
-            })
-            .then(res => res.json())
-            .then(data => {
-                if(data.deletedCount > 0){
-                    alert('Deleted Successfully!')
-
-                    // update the UI (or, set [messages] dependency instead of it)
-                    const remainingMessages = allMessages.filter(product => product._id !== id);
-                    setAllMessages(remainingMessages);
-                }
-            })
-        }
-    }
-
     return (
         <div>
             <Typography sx={{ pb:4, color: 'coral', fontWeight: 600 }} variant="h5" component="div">
@@ -64,20 +44,17 @@ const Messages = () => {
                         key={row._id}
                         sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
-                            <TableCell component="th" scope="row">
-                                {row.email}
-                            </TableCell>
-                            <TableCell align="center">{row.subject}</TableCell>
-                            <TableCell align="right">{ row.message}</TableCell>
-                            <TableCell align="right">{row.time }</TableCell>
-                            <TableCell align="right">{<Button 
-                                onClick={() => handleDeleteMessage(row._id)}
-                                size="small" 
-                                variant="contained" 
-                                style={{backgroundColor: 'red'}}>
-                                    Delete
-                                </Button> }
-                            </TableCell>
+                        <TableCell component="th" scope="row">
+                            {row.email}
+                        </TableCell>
+                        <TableCell align="center">{row.subject}</TableCell>
+                        <TableCell align="right">{ row.message}</TableCell>
+                        <TableCell align="right">{row.time }</TableCell>
+                        <TableCell align="right">{
+                            <Button size="small" variant="contained" style={{backgroundColor: 'red'}}>
+                                Delete
+                            </Button> 
+                        }</TableCell>
                         </TableRow>
                     ))}
                     </TableBody>
