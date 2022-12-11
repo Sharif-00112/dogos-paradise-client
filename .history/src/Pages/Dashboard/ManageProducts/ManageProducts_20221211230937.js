@@ -32,6 +32,10 @@ const ManageProducts = () => {
         .then(data => setDogs(data))
     },[])
 
+    const handleEditDog = id =>{
+
+    }
+
     const handleDeleteDog = id =>{
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
@@ -103,7 +107,7 @@ const ManageProducts = () => {
                             <TableCell align="center">{row.price}$</TableCell>
                             <TableCell align="left">{row.description}</TableCell>
                             <TableCell align="center">{<Button 
-                                onClick={handleUpdateProductModalOpen}
+                                onClick={() => handleEditDog(row._id)}
                                 size="small" 
                                 variant="contained" 
                                 style={{backgroundColor: 'gray'}}>

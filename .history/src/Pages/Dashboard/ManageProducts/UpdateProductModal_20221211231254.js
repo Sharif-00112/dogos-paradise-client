@@ -20,7 +20,7 @@ const style = {
     p: 4,
 };
 
-const UpdateProductModal = ({ openUpdateProductModal, handleUpdateProductModalClose }) => {
+const UpdateProductModal = ({ openAddProductModal, handleAddProductModalClose }) => {
     const { user } = useAuth();
     const initialInfo = {
         title: '',
@@ -30,30 +30,30 @@ const UpdateProductModal = ({ openUpdateProductModal, handleUpdateProductModalCl
         price: '',
         description: ''
     };
-    const [updateProductInfo, setUpdateProductInfoInfo] = useState(initialInfo);
+    const [addProductInfo, setAddProductInfoInfo] = useState(initialInfo);
 
     const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
-        const newInfo = {...updateProductInfo};
+        const newInfo = {...addProductInfo};
         newInfo[field] = value;
         // console.log(newInfo);
-        setUpdateProductInfoInfo(newInfo);
+        setAddProductInfoInfo(newInfo);
     }
 
-    const handleUpdateProductSubmit = e =>{
+    const handleAddProductSubmit = e =>{
         e.preventDefault();
 
         //collect form data and other info 
         const product = {
-            ...updateProductInfo,
+            ...addProductInfo,
             addedBy: user.email,
             addedAt: new Date().toLocaleDateString()
         }
         // console.log(product);
 
         //send data to the server and database
-        fetch('http://localhost:30055/dogs', {
+        fetch('http://localhost:3005/dogs', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
@@ -65,7 +65,7 @@ const UpdateProductModal = ({ openUpdateProductModal, handleUpdateProductModalCl
             // console.log(data);
             if(data.insertedId){
                 alert('Added new dog Successfully!');
-                handleUpdateProductModalClose();
+                handleAddProductModalClose();
             }
         })
     }
@@ -75,22 +75,20 @@ const UpdateProductModal = ({ openUpdateProductModal, handleUpdateProductModalCl
             <Modal
                 aria-labelledby="transition-modal-title"
                 aria-describedby="transition-modal-description"
-                open={openUpdateProductModal}
-                onClose={handleUpdateProductModalClose}
+                open={openAddProductModal}
+                onClose={handleAddProductModalClose}
                 closeAfterTransition
                 BackdropComponent={Backdrop}
                 BackdropProps={{
                 timeout: 500,
                 }}
             >
-                <Fade in={openUpdateProductModal}>
+                <Fade in={openAddProductModal}>
                     <Box sx={style}>
                             <Typography style={{ textAlign: 'center'}} sx={{ mb:3, fontSize: 20, fontWeight: 600, color: 'coral'}} variant='h5' gutterBottom component='div'>
-                                Edit Dog 
-                                <br />
-                                ---PENDING---
+                                New Dog
                             </Typography>
-                        <form onSubmit={handleUpdateProductSubmit}>
+                        <form onSubmit={handleAddProductSubmit}>
                         <TextField
                             // disabled
                             // defaultValue={date.toDateString()}
@@ -154,7 +152,7 @@ const UpdateProductModal = ({ openUpdateProductModal, handleUpdateProductModalCl
                             size="small"
                             />
                         <Button type='submit' sx={{m:1}} variant="contained" style={{backgroundColor: 'coral'}}>Submit</Button>
-                        <Button onClick={handleUpdateProductModalClose} sx={{m:1}} variant="contained" style={{backgroundColor: 'gray'}}>Cancel</Button>
+                        <Button onClick={handleAddProductModalClose} sx={{m:1}} variant="contained" style={{backgroundColor: 'gray'}}>Cancel</Button>
                         </form>
                     </Box>
                 </Fade>

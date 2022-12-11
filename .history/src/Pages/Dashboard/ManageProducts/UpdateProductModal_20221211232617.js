@@ -53,7 +53,7 @@ const UpdateProductModal = ({ openUpdateProductModal, handleUpdateProductModalCl
         // console.log(product);
 
         //send data to the server and database
-        fetch('http://localhost:30055/dogs', {
+        fetch('http://localhost:3005/dogs', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

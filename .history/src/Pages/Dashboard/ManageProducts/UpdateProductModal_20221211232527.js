@@ -53,7 +53,7 @@ const UpdateProductModal = ({ openUpdateProductModal, handleUpdateProductModalCl
         // console.log(product);
 
         //send data to the server and database
-        fetch('http://localhost:30055/dogs', {
+        fetch('http://localhost:3005/dogs', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
@@ -86,9 +86,7 @@ const UpdateProductModal = ({ openUpdateProductModal, handleUpdateProductModalCl
                 <Fade in={openUpdateProductModal}>
                     <Box sx={style}>
                             <Typography style={{ textAlign: 'center'}} sx={{ mb:3, fontSize: 20, fontWeight: 600, color: 'coral'}} variant='h5' gutterBottom component='div'>
-                                Edit Dog 
-                                <br />
-                                ---PENDING---
+                                Edit Dog //PENDING//
                             </Typography>
                         <form onSubmit={handleUpdateProductSubmit}>
                         <TextField

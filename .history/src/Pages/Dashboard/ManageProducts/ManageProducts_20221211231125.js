@@ -103,7 +103,7 @@ const ManageProducts = () => {
                             <TableCell align="center">{row.price}$</TableCell>
                             <TableCell align="left">{row.description}</TableCell>
                             <TableCell align="center">{<Button 
-                                onClick={handleUpdateProductModalOpen}
+                                onClick={() => handleUpdateProductModalOpen(row._id)}
                                 size="small" 
                                 variant="contained" 
                                 style={{backgroundColor: 'gray'}}>

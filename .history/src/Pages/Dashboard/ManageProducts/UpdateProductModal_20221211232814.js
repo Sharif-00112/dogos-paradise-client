@@ -41,34 +41,34 @@ const UpdateProductModal = ({ openUpdateProductModal, handleUpdateProductModalCl
         setUpdateProductInfoInfo(newInfo);
     }
 
-    const handleUpdateProductSubmit = e =>{
-        e.preventDefault();
+    // const handleUpdateProductSubmit = e =>{
+    //     e.preventDefault();
 
-        //collect form data and other info 
-        const product = {
-            ...updateProductInfo,
-            addedBy: user.email,
-            addedAt: new Date().toLocaleDateString()
-        }
-        // console.log(product);
+    //     //collect form data and other info 
+    //     const product = {
+    //         ...updateProductInfo,
+    //         addedBy: user.email,
+    //         addedAt: new Date().toLocaleDateString()
+    //     }
+    //     // console.log(product);
 
-        //send data to the server and database
-        fetch('http://localhost:30055/dogs', {
-            method: 'POST',
-            headers: {
-                'content-type' : 'application/json'
-            },
-            body: JSON.stringify(product)
-        })
-        .then(res => res.json())
-        .then(data => {
-            // console.log(data);
-            if(data.insertedId){
-                alert('Added new dog Successfully!');
-                handleUpdateProductModalClose();
-            }
-        })
-    }
+    //     //send data to the server and database
+    //     fetch('http://localhost:3005/dogs', {
+    //         method: 'POST',
+    //         headers: {
+    //             'content-type' : 'application/json'
+    //         },
+    //         body: JSON.stringify(product)
+    //     })
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         // console.log(data);
+    //         if(data.insertedId){
+    //             alert('Added new dog Successfully!');
+    //             handleUpdateProductModalClose();
+    //         }
+    //     })
+    // }
 
     return (
         <div>
