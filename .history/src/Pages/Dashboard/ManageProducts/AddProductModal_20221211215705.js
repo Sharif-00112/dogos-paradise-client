@@ -47,6 +47,8 @@ const AddProductModal = ({ openAddProductModal, handleAddProductModalClose }) =>
         //collect form data and other info 
         const product = {
             ...addProductInfo,
+            // serviceName: name,
+            // time,
             addedBy: user.email,
             addedAt: new Date().toLocaleDateString()
         }

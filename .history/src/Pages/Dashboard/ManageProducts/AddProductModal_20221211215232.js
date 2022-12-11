@@ -47,6 +47,8 @@ const AddProductModal = ({ openAddProductModal, handleAddProductModalClose }) =>
         //collect form data and other info 
         const product = {
             ...addProductInfo,
+            // serviceName: name,
+            // time,
             addedBy: user.email,
             addedAt: new Date().toLocaleDateString()
         }
@@ -93,61 +95,51 @@ const AddProductModal = ({ openAddProductModal, handleAddProductModalClose }) =>
                             // disabled
                             // defaultValue={date.toDateString()}
                             required
-                            label="Title"
+                            label="Date"
                             sx={{width: "90%", m:1 }}
                             id="outlined-size-small"
-                            placeholder='Title'
-                            name='title'
+                            placeholder='Your Name'
+                            name='patientName'
                             onBlur={handleOnBlur}
                             size="small"
                             />
                         <TextField
-                            label="Age"
+                            label="Time Slot"
                             required
                             sx={{width: "90%", m:1 }}
                             id="outlined-size-small"
-                            placeholder='Age (month)'
-                            name='age'
-                            onBlur={handleOnBlur}
-                            size="small"
-                            />
-                        <TextField
-                            sx={{width: "90%", m:1 }}
-                            required
-                            label="Breed"
-                            id="outlined-size-small"
-                            placeholder='Breed'
-                            name='breed'
+                            placeholder='Your Name'
+                            name='patientName'
                             onBlur={handleOnBlur}
                             size="small"
                             />
                         <TextField
                             sx={{width: "90%", m:1 }}
                             required
-                            label="Image URL"
+                            label="Full Name"
                             id="outlined-size-small"
-                            placeholder='Image URL'
-                            name='image'
+                            placeholder='Your Name'
+                            name='patientName'
                             onBlur={handleOnBlur}
                             size="small"
                             />
                         <TextField
                             sx={{width: "90%", m:1 }}
                             required
-                            label="Price"
+                            label="Email Address"
                             id="outlined-size-small"
-                            placeholder='Price ($)'
-                            name='price'
+                            placeholder='Your Email'
+                            name='email'
                             onBlur={handleOnBlur}
                             size="small"
                             />
                         <TextField
                             sx={{width: "90%", m:1 }}
                             required
-                            label="Description"
+                            label="Phone"
                             id="outlined-size-small"
-                            placeholder='Short Description'
-                            name='description'
+                            placeholder='Phone Number'
+                            name='phone'
                             onBlur={handleOnBlur}
                             size="small"
                             />

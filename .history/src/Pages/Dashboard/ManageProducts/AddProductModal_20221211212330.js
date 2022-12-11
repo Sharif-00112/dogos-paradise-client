@@ -47,13 +47,15 @@ const AddProductModal = ({ openAddProductModal, handleAddProductModalClose }) =>
         //collect form data and other info 
         const product = {
             ...addProductInfo,
+            serviceName: name,
+            time,
             addedBy: user.email,
             addedAt: new Date().toLocaleDateString()
         }
         // console.log(product);
 
         //send data to the server and database
-        fetch('http://localhost:3005/dogs', {
+        fetch('http://localhost:3005/appointments', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
@@ -64,10 +66,11 @@ const AddProductModal = ({ openAddProductModal, handleAddProductModalClose }) =>
         .then(data => {
             // console.log(data);
             if(data.insertedId){
-                alert('Added new dog Successfully!');
+                alert('Appointment Submitted Successfully!');
                 handleAddProductModalClose();
             }
         })
+        // alert('Appointment Submitted');
     }
 
     return (
@@ -75,84 +78,71 @@ const AddProductModal = ({ openAddProductModal, handleAddProductModalClose }) =>
             <Modal
                 aria-labelledby="transition-modal-title"
                 aria-describedby="transition-modal-description"
-                open={openAddProductModal}
-                onClose={handleAddProductModalClose}
+                open={openBooking}
+                onClose={handleBookingClose}
                 closeAfterTransition
                 BackdropComponent={Backdrop}
                 BackdropProps={{
                 timeout: 500,
                 }}
             >
-                <Fade in={openAddProductModal}>
+                <Fade in={openBooking}>
                     <Box sx={style}>
-                            <Typography style={{ textAlign: 'center'}} sx={{ mb:3, fontSize: 20, fontWeight: 600, color: 'coral'}} variant='h5' gutterBottom component='div'>
-                                New Dog
+                            <Typography style={{ textAlign: 'center'}} sx={{ mb:3, fontSize: 20, fontWeight: 600, color: '#5CE7ED'}} variant='h6' gutterBottom component='div'>
+                                {name}
                             </Typography>
                         <form onSubmit={handleAddProductSubmit}>
                         <TextField
-                            // disabled
-                            // defaultValue={date.toDateString()}
-                            required
-                            label="Title"
+                            disabled
+                            label="Date"
                             sx={{width: "90%", m:1 }}
                             id="outlined-size-small"
-                            placeholder='Title'
-                            name='title'
-                            onBlur={handleOnBlur}
+                            defaultValue={date.toDateString()}
                             size="small"
                             />
                         <TextField
-                            label="Age"
-                            required
+                            disabled
+                            label="Time Slot"
                             sx={{width: "90%", m:1 }}
                             id="outlined-size-small"
-                            placeholder='Age (month)'
-                            name='age'
-                            onBlur={handleOnBlur}
+                            defaultValue={time}
                             size="small"
                             />
                         <TextField
                             sx={{width: "90%", m:1 }}
                             required
-                            label="Breed"
+                            label="Full Name"
                             id="outlined-size-small"
-                            placeholder='Breed'
-                            name='breed'
+                            placeholder='Your Name'
+                            name='patientName'
+                            defaultValue={user.displayName}
                             onBlur={handleOnBlur}
                             size="small"
                             />
                         <TextField
                             sx={{width: "90%", m:1 }}
-                            required
-                            label="Image URL"
+                            // required
+                            label="Email Address"
                             id="outlined-size-small"
-                            placeholder='Image URL'
-                            name='image'
+                            placeholder='Your Email'
+                            name='email'
+                            defaultValue={user.email}
                             onBlur={handleOnBlur}
                             size="small"
                             />
                         <TextField
                             sx={{width: "90%", m:1 }}
                             required
-                            label="Price"
+                            label="Phone"
                             id="outlined-size-small"
-                            placeholder='Price ($)'
-                            name='price'
+                            placeholder='Phone Number'
+                            name='phone'
+                            // defaultValue='+880'
                             onBlur={handleOnBlur}
                             size="small"
                             />
-                        <TextField
-                            sx={{width: "90%", m:1 }}
-                            required
-                            label="Description"
-                            id="outlined-size-small"
-                            placeholder='Short Description'
-                            name='description'
-                            onBlur={handleOnBlur}
-                            size="small"
-                            />
-                        <Button type='submit' sx={{m:1}} variant="contained" style={{backgroundColor: 'coral'}}>Submit</Button>
-                        <Button onClick={handleAddProductModalClose} sx={{m:1}} variant="contained" style={{backgroundColor: 'gray'}}>Cancel</Button>
+                        <Button type='submit' sx={{m:1}} variant="contained" style={{backgroundColor: '#5CE7ED'}}>Submit</Button>
+                        <Button onClick={handleBookingClose} sx={{m:1}} variant="contained" style={{backgroundColor: 'gray'}}>Cancel</Button>
                         </form>
                     </Box>
                 </Fade>

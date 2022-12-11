@@ -47,6 +47,8 @@ const AddProductModal = ({ openAddProductModal, handleAddProductModalClose }) =>
         //collect form data and other info 
         const product = {
             ...addProductInfo,
+            // serviceName: name,
+            // time,
             addedBy: user.email,
             addedAt: new Date().toLocaleDateString()
         }
@@ -90,64 +92,51 @@ const AddProductModal = ({ openAddProductModal, handleAddProductModalClose }) =>
                             </Typography>
                         <form onSubmit={handleAddProductSubmit}>
                         <TextField
-                            // disabled
+                            disabled
+                            label="Date"
+                            sx={{width: "90%", m:1 }}
+                            id="outlined-size-small"
                             // defaultValue={date.toDateString()}
-                            required
-                            label="Title"
-                            sx={{width: "90%", m:1 }}
-                            id="outlined-size-small"
-                            placeholder='Title'
-                            name='title'
-                            onBlur={handleOnBlur}
                             size="small"
                             />
                         <TextField
-                            label="Age"
-                            required
+                            disabled
+                            label="Time Slot"
                             sx={{width: "90%", m:1 }}
                             id="outlined-size-small"
-                            placeholder='Age (month)'
-                            name='age'
-                            onBlur={handleOnBlur}
+                            // defaultValue={time}
                             size="small"
                             />
                         <TextField
                             sx={{width: "90%", m:1 }}
                             required
-                            label="Breed"
+                            label="Full Name"
                             id="outlined-size-small"
-                            placeholder='Breed'
-                            name='breed'
+                            placeholder='Your Name'
+                            name='patientName'
+                            // defaultValue={user.displayName}
                             onBlur={handleOnBlur}
                             size="small"
                             />
                         <TextField
                             sx={{width: "90%", m:1 }}
-                            required
-                            label="Image URL"
+                            // required
+                            label="Email Address"
                             id="outlined-size-small"
-                            placeholder='Image URL'
-                            name='image'
+                            placeholder='Your Email'
+                            name='email'
+                            // defaultValue={user.email}
                             onBlur={handleOnBlur}
                             size="small"
                             />
                         <TextField
                             sx={{width: "90%", m:1 }}
                             required
-                            label="Price"
+                            label="Phone"
                             id="outlined-size-small"
-                            placeholder='Price ($)'
-                            name='price'
-                            onBlur={handleOnBlur}
-                            size="small"
-                            />
-                        <TextField
-                            sx={{width: "90%", m:1 }}
-                            required
-                            label="Description"
-                            id="outlined-size-small"
-                            placeholder='Short Description'
-                            name='description'
+                            placeholder='Phone Number'
+                            name='phone'
+                            // defaultValue='+880'
                             onBlur={handleOnBlur}
                             size="small"
                             />

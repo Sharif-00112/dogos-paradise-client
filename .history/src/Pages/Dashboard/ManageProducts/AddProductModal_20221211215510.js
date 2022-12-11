@@ -47,6 +47,8 @@ const AddProductModal = ({ openAddProductModal, handleAddProductModalClose }) =>
         //collect form data and other info 
         const product = {
             ...addProductInfo,
+            // serviceName: name,
+            // time,
             addedBy: user.email,
             addedAt: new Date().toLocaleDateString()
         }
@@ -96,7 +98,7 @@ const AddProductModal = ({ openAddProductModal, handleAddProductModalClose }) =>
                             label="Title"
                             sx={{width: "90%", m:1 }}
                             id="outlined-size-small"
-                            placeholder='Title'
+                            placeholder='Your Name'
                             name='title'
                             onBlur={handleOnBlur}
                             size="small"
@@ -106,7 +108,7 @@ const AddProductModal = ({ openAddProductModal, handleAddProductModalClose }) =>
                             required
                             sx={{width: "90%", m:1 }}
                             id="outlined-size-small"
-                            placeholder='Age (month)'
+                            placeholder='Your Name'
                             name='age'
                             onBlur={handleOnBlur}
                             size="small"
@@ -116,7 +118,7 @@ const AddProductModal = ({ openAddProductModal, handleAddProductModalClose }) =>
                             required
                             label="Breed"
                             id="outlined-size-small"
-                            placeholder='Breed'
+                            placeholder='Your Name'
                             name='breed'
                             onBlur={handleOnBlur}
                             size="small"
@@ -126,7 +128,7 @@ const AddProductModal = ({ openAddProductModal, handleAddProductModalClose }) =>
                             required
                             label="Image URL"
                             id="outlined-size-small"
-                            placeholder='Image URL'
+                            placeholder='Your Email'
                             name='image'
                             onBlur={handleOnBlur}
                             size="small"
@@ -136,7 +138,7 @@ const AddProductModal = ({ openAddProductModal, handleAddProductModalClose }) =>
                             required
                             label="Price"
                             id="outlined-size-small"
-                            placeholder='Price ($)'
+                            placeholder='Phone Number'
                             name='price'
                             onBlur={handleOnBlur}
                             size="small"
@@ -146,7 +148,7 @@ const AddProductModal = ({ openAddProductModal, handleAddProductModalClose }) =>
                             required
                             label="Description"
                             id="outlined-size-small"
-                            placeholder='Short Description'
+                            placeholder='Phone Number'
                             name='description'
                             onBlur={handleOnBlur}
                             size="small"
