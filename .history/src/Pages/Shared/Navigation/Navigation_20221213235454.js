@@ -42,11 +42,6 @@ const pages = [
     // </Link>,
     <Link 
         style={{ textDecoration:'none', color:'white' }}
-        to = '/donate'>
-        <Button sx={{mx:1}} color="inherit">Donate</Button>
-    </Link>,
-    <Link 
-        style={{ textDecoration:'none', color:'white' }}
         to = '/dashboard'>
         <Button sx={{mx:1}} color="inherit">Dashboard</Button>
     </Link>,

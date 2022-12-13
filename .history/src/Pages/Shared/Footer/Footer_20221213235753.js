@@ -107,7 +107,7 @@ const Footer = () => {
                         <Link 
                             style={{ textDecoration:'none', color:'whitesmoke' }}
                             to = '/donate'>
-                            <Button size="medium" variant="contained" style={{backgroundColor: 'rgb(106,85,253)'}} sx={{my:1}}>Donate us</Button>
+                            <Button size="medium" variant="contained" style={{backgroundColor: 'rgb(24,35,60)'}} sx={{my:1}}>Donate us</Button>
                         </Link>
                     </Grid>
                     <Grid item style={{ textAlign: 'left'}} xs={6} md={3}>
