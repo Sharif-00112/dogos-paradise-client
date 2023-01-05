@@ -1,7 +1,6 @@
 import { Typography } from '@mui/material';
 import React, { Component } from 'react';
 
-//Using react class component (rcc)
 class Donate extends Component {
     render() {
         return (
