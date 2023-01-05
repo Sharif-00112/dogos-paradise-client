@@ -1,6 +1,5 @@
 import { Typography } from '@mui/material';
 import React, { Component } from 'react';
-import Donator from './Donator';
 
 //Using react class component (rcc)
 class Donate extends Component {
@@ -33,17 +32,11 @@ class Donate extends Component {
                     Contribute to our social works 
                     <br />
                     {/* using state variable  */}
-                    Join with {this.state.users.length} existing members below: 
+                    Join {this.state.users.length} members
                 </Typography>
-                {/* <Typography sx={{ m: 3, color: 'coral', fontWeight: 400 }} variant="h6" component="div">
+                <Typography sx={{ m: 3, color: 'coral', fontWeight: 400 }} variant="h6" component="div">
                     Coming soon...
-                </Typography> */}
-
-                {
-                    this.state.users.map(user => <Donator
-                        user={user}
-                    ></Donator>)
-                }
+                </Typography>
                 <hr />
             </div>
         );

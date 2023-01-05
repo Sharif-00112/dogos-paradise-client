@@ -33,7 +33,7 @@ class Donate extends Component {
                     Contribute to our social works 
                     <br />
                     {/* using state variable  */}
-                    Join with {this.state.users.length} existing members below: 
+                    Join with {this.state.users.length} existing members
                 </Typography>
                 {/* <Typography sx={{ m: 3, color: 'coral', fontWeight: 400 }} variant="h6" component="div">
                     Coming soon...
